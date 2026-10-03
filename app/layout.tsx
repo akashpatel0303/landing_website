@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#dbebf4] text-[#0b0e32]">
-        <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-2 px-4 pt-5 sm:px-8 sm:pt-7">
+        <header className="absolute inset-x-0 top-0 z-10 grid grid-cols-1 items-center gap-y-1 px-4 pt-5 sm:grid-cols-[1fr_auto_1fr] sm:px-8 sm:pt-7">
           <Link
             href="/"
             aria-label="Home"
@@ -34,7 +34,7 @@ export default function RootLayout({
               className="h-10 w-10 sm:h-12 sm:w-12"
             />
           </Link>
-          <nav aria-label="Primary navigation" className="flex flex-wrap items-center justify-end gap-x-2 gap-y-1 sm:gap-x-8">
+          <nav aria-label="Primary navigation" className="flex flex-wrap items-center justify-center justify-self-center gap-x-2 gap-y-1 sm:col-start-2 sm:row-start-1 sm:gap-x-8">
             {navigation.map(({ label, href }) => (
               <Link
                 key={href}
