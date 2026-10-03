@@ -20,12 +20,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#dbebf4] text-[#0b0e32]">
-        <header className="absolute inset-x-0 top-0 z-10 px-4 pt-6 sm:pt-8">
-          <nav aria-label="Primary navigation" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 sm:gap-x-10">
+        <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-2 px-4 pt-5 sm:px-8 sm:pt-7">
+          <Link
+            href="/"
+            aria-label="Home"
+            className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eb662c]"
+          >
+            <img
+              src="/home-icon.png"
+              alt=""
+              width={1408}
+              height={1408}
+              className="h-10 w-10 sm:h-12 sm:w-12"
+            />
+          </Link>
+          <nav aria-label="Primary navigation" className="flex flex-wrap items-center justify-end gap-x-2 gap-y-1 sm:gap-x-8">
             {navigation.map(({ label, href }) => (
               <Link
                 key={href}
-                className="rounded-sm px-1 py-2 text-sm font-medium tracking-wide transition-colors hover:text-[#eb662c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eb662c] sm:text-base"
+                className="rounded-sm px-0.5 py-2 text-[13px] font-medium transition-colors hover:text-[#eb662c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eb662c] sm:px-1 sm:text-base sm:tracking-wide"
                 href={href}
               >
                 {label}
