@@ -7,18 +7,24 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:svelte": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
+    "motion-sv": "0.1.13",
     "next": "16.3.8",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "svelte": "5.57.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^24.0.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "svelte-check": "4.7.6",
+    "svelte-loader": "3.2.4",
+    "svelte-preprocess": "6.0.5",
     "tailwindcss": "4.3.3",
     "typescript": "^5.9.3"
   }
