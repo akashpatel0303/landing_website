@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "LandingHealth",
-  description: "LandingHealth",
+  description: "A connected operating system for physical therapy.",
 };
 
 const navigation = [
@@ -27,11 +28,12 @@ export default function RootLayout({
             aria-label="Home"
             className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eb662c]"
           >
-            <img
+            <Image
               src="/home-icon.png"
               alt=""
               width={1408}
               height={1408}
+              unoptimized
               className="h-10 w-10 sm:h-12 sm:w-12"
             />
           </Link>

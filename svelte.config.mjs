@@ -1,5 +1,7 @@
 import sveltePreprocess from "svelte-preprocess";
 
-export default {
+const svelteConfig = {
   preprocess: sveltePreprocess(),
 };
+
+export default svelteConfig;

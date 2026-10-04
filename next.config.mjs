@@ -4,7 +4,7 @@ import svelteConfig from "./svelte.config.mjs";
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
-export default {
+const nextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svelte(?:\.js)?$/,
@@ -29,3 +29,5 @@ export default {
     return config;
   },
 };
+
+export default nextConfig;

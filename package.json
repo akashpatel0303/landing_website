@@ -5,6 +5,7 @@
   "packageManager": "pnpm@11.17.0",
   "scripts": {
     "dev": "next dev --webpack",
+    "lint": "eslint .",
     "build": "next build --webpack",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -22,6 +23,8 @@
     "@types/node": "^24.0.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.3.8",
     "svelte-check": "4.7.6",
     "svelte-loader": "3.2.4",
     "svelte-preprocess": "6.0.5",

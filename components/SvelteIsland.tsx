@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import type { Component } from "svelte";
 
-type SvelteModule = { default: Component<any> };
+type SvelteModule = { default: Component<Record<string, unknown>> };
 
 type SvelteIslandProps = {
   load: () => Promise<SvelteModule>;
