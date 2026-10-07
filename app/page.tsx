@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import RecoverySignalIsland from "@/components/RecoverySignalIsland";
 
 const practiceCopy = [
   "Landing helps therapists anticipate demand and plan appointment availability around the needs of their practice. Patients can book online sessions, while AI agents help coordinate scheduling, reminders, and follow ups.",
@@ -72,19 +73,23 @@ export default function Home() {
       </section>
 
       <section className="bg-[#0b0e32] px-6 py-24 text-[#f7fbfd] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
-        <div className="mx-auto max-w-6xl">
-          <span aria-hidden="true" className="mb-8 block h-1.5 w-12 rounded-full bg-[#eb662c]" />
-          <h2 className="max-w-4xl text-[clamp(2.4rem,4.8vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.045em]">
-            More time for patient care
-          </h2>
-          <p className="mt-8 max-w-3xl text-base leading-8 text-[#dce9ef] sm:mt-10 sm:text-xl sm:leading-9">
-            Our goal is to help physical therapists support more patients while
-            preserving the attention each person deserves. Landing’s devices
-            provide meaningful context, and its AI agents help with the
-            coordination and administrative work surrounding care. Therapists
-            remain responsible for exercise plans and clinical decisions, with
-            one connected system supporting their work.
-          </p>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,.88fr)_minmax(0,1.12fr)] lg:gap-16">
+          <div>
+            <span aria-hidden="true" className="mb-8 block h-1.5 w-12 rounded-full bg-[#eb662c]" />
+            <h2 className="max-w-4xl text-[clamp(2.4rem,4.8vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.045em]">
+              More time for patient care
+            </h2>
+            <p className="mt-8 max-w-3xl text-base leading-8 text-[#dce9ef] sm:mt-10 sm:text-xl sm:leading-9">
+              Our goal is to help physical therapists support more patients while
+              preserving the attention each person deserves. Landing’s devices
+              provide meaningful context, and its AI agents help with the
+              coordination and administrative work surrounding care. Therapists
+              remain responsible for exercise plans and clinical decisions, with
+              one connected system supporting their work.
+            </p>
+            <Link href="/devices" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#f28a59] transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eb662c]">Explore SafeSock <span aria-hidden="true">↗</span></Link>
+          </div>
+          <RecoverySignalIsland />
         </div>
       </section>
     </main>

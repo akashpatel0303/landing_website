@@ -2,11 +2,11 @@
 
 A responsive site for Landing, built with Next.js App Router, TypeScript, Tailwind CSS, and pnpm. Landing is the company; SafeSock is its sensor-based recovery product. The navigation links to Product, Solution, Devices, Schedule, and About pages.
 
-The Product page includes a load-signal illustration adapted from the previous SafeSock site. The Devices page uses its product mark and demo video. The visualizations are illustrative and do not show live patient data.
+The Product page includes a load-signal illustration adapted from the previous SafeSock site. The Devices page uses its product mark and demo video. The homepage uses a Svelte animation to show the intended sensing workflow. The visualizations are illustrative and do not show live patient data.
 
 ## Svelte animations
 
-The site can mount Svelte 5 components alongside React through `components/SvelteIsland.tsx`. Svelte, Motion SV, and the Svelte webpack loader are installed. The Svelte Animations collection is a component registry: copy a chosen component and its listed dependencies from the [registry](https://sv-animations.vercel.app/) into `src/lib/` when needed, then load it in a React client component with `SvelteIsland`. The existing pages do not load animation code.
+The site mounts Svelte 5 components alongside React through `components/SvelteIsland.tsx`. The homepage loads `RecoverySignals.svelte` for its animated sensing illustration. Svelte, Motion SV, and the Svelte webpack loader are installed.
 
 For example, in a React client component:
 
