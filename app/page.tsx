@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const practiceCopy = [
   "Landing helps therapists anticipate demand and plan appointment availability around the needs of their practice. Patients can book online sessions, while AI agents help coordinate scheduling, reminders, and follow ups.",
   "For exercise planning, Landing helps therapists find exercises suited to treatment goals, available equipment, and the restrictions they define. Therapists can prepare personalized home exercise guides with clear instructions and schedules, giving patients a practical reference between sessions.",
-  "As the ecosystem develops, patient check ins and device measurements can help therapists prepare for appointments and identify where additional attention may be needed. Bringing these details together gives therapists a clearer picture of each patient’s experience in one place.",
+  "SafeSock adds a view of how a patient bears weight outside the clinic. Its sensor sleeve is designed to sit inside a boot, cast, or brace and capture pressure patterns that can help therapists discuss recovery with more context.",
 ];
 
 export default function Home() {
@@ -11,15 +12,10 @@ export default function Home() {
     <main className="overflow-x-clip">
       <section className="flex min-h-svh items-center bg-[#dbebf4] px-6 pb-20 pt-40 sm:px-10 sm:pb-24 sm:pt-44 lg:px-16 lg:pt-40">
         <div className="mx-auto w-full max-w-6xl">
-          <Image
-            src="/logo.png"
-            alt="LandingHealth"
-            width={1107}
-            height={142}
-            priority
-            unoptimized
-            className="entrance h-auto w-56 sm:w-72 lg:w-80"
-          />
+          <div className="entrance flex items-center gap-3">
+            <Image src="/home-icon.png" alt="" width={1408} height={1408} priority unoptimized className="h-12 w-12 rounded-sm sm:h-14 sm:w-14" />
+            <span className="text-3xl font-semibold tracking-[-0.055em] text-[#0b0e32] sm:text-4xl">Landing</span>
+          </div>
 
           <div className="mt-11 grid items-end gap-8 lg:mt-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16">
             <h1 className="entrance entrance-delay-1 max-w-3xl text-[clamp(2.9rem,7vw,5.75rem)] font-semibold leading-[1.03] tracking-[-0.055em] text-[#0b0e32]">
@@ -29,12 +25,17 @@ export default function Home() {
               Landing brings connected devices and intelligent software
               together to help physical therapists manage their practices and
               deliver care beyond the clinic. Our device ecosystem, including
-              SafeSock, captures movement data that gives therapists greater
-              insight into their patients’ activity. The platform connects that
+              SafeSock, is designed to capture weight-bearing patterns during
+              recovery. The platform connects that
               information with scheduling, exercise planning, and patient
               communication, supporting the work that happens before, during,
               and between appointments.
             </p>
+          </div>
+
+          <div className="entrance entrance-delay-3 mt-10 flex flex-wrap gap-3">
+            <Link href="/product" className="rounded-full bg-[#0b0e32] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#303856] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#eb662c]">Explore the platform</Link>
+            <Link href="/devices" className="rounded-full border border-[#0b0e32]/25 px-6 py-3 text-sm font-semibold text-[#0b0e32] transition-colors hover:border-[#eb662c] hover:text-[#d55823] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#eb662c]">Meet SafeSock</Link>
           </div>
 
           <div

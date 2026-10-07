@@ -4,8 +4,8 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LandingHealth",
-  description: "A connected operating system for physical therapy.",
+  title: "Landing",
+  description: "Landing connects physical therapy practice tools with SafeSock movement insights.",
 };
 
 const navigation = [
@@ -25,7 +25,7 @@ export default function RootLayout({
         <header className="absolute inset-x-0 top-0 z-10 grid grid-cols-1 items-center gap-y-1 px-4 pt-5 sm:px-8 sm:pt-7 md:grid-cols-[1fr_auto_1fr]">
           <Link
             href="/"
-            aria-label="Home"
+            aria-label="Landing home"
             className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eb662c]"
           >
             <Image
@@ -33,6 +33,7 @@ export default function RootLayout({
               alt=""
               width={1408}
               height={1408}
+              loading="eager"
               unoptimized
               className="h-10 w-10 sm:h-12 sm:w-12"
             />
